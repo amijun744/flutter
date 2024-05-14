@@ -13,15 +13,19 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.purple,
-      body: Center(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("lib/images/logo.jpg"),
+              scale: 1.0,
+              fit: BoxFit.cover),
+        ),
+      
+      child : Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              'lib/images/logo.jpg',
-              width: 200,
-              height: 200,
-            ),
+           
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -34,6 +38,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+    ),
     );
   }
 }
